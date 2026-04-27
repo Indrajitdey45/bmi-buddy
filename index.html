@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Know Your BMI – Your First Step to Fitness</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/Favicon.png">
+  </head>
+  <body>
+    <div class="nav">
+      <h1 class="logo">BMI Buddy</h1>
+      <ul class="nav-links">
+        <li class="active"><a href="#">Calculator</a></li>
+        <li><a href="#">Weight Guide</a></li>
+        <li><a href="#">Health Tips</a></li>
+      </ul>
+    </div>
+
+    <div class="page1">
+      <form class="contener">
+        <div class="about">
+          <h1>BMI Buddy</h1>
+          <h3>Every body deserves balance.</h3>
+          <p>
+            Your health journey starts with awareness. BMI Buddy <br />
+            provides a simple way to measure and understand <br />
+            your body mass index, empowering you with the knowledge <br />
+            you need to build better habits and stay on track.
+          </p>
+          <div class="user-grp">
+            <img src="assets/user_group.png" alt="" class="user" />
+            <p>Joined by 1,000+ buddies</p>
+          </div>
+        </div>
+        <div class="input-contener">
+          <div class="height">
+            <label for="input" class="leb">Height (cm)</label>
+            <input type="text" placeholder="e.g., 175" id="hig" />
+          </div>
+          <div class="weight">
+            <label for="input" class="leb">Weight (kg)</label>
+            <input type="text" placeholder="e.g., 70" id="wid" />
+          </div>
+          <div class="button">
+            <button>Calculate BMI</button>
+          </div>
+
+          <h3 class="data"></h3>
+          <p class="info"></p>
+
+        </div>
+      </form>
+    </div>
+
+    <div class="page2">
+      <div class="left">
+        <img src="assets/ref_img.png" alt="" class="ref" />
+      </div>
+      <div class="right">
+        <h2>Why Track BMI?</h2>
+        <h4>
+          Body Mass Index (BMI) is a simple yet effective way <br />to
+          understand whether your weight is in a healthy range. <br />
+          It helps you stay aware of your fitness level and detect <br />
+          potential health risks early.
+        </h4>
+        <div class="point">
+          <p>
+            <i class="fa-solid fa-check"></i>
+            <span>Smart Monitoring:</span>Track small changes in your body over <br>
+            time and stay consistent with your fitness goals.
+          </p>
+          <p>
+            <i class="fa-solid fa-check"></i>
+            <span>Personalized Insights:</span> Get a better understanding of <br>
+            your health status based on your BMI results.
+          </p>
+          <p>
+            <i class="fa-solid fa-check"></i>
+            <span>Early Awareness:</span> Identify possible weight-related risks <br>
+            and take action before they become serious.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page3">
+      <h2>BMI Weight Guide</h2>
+      <p>understand where you stand and what your results mean for your overall health profile.</p>
+
+      <div class="card">
+        <div class="card1 blue-card">
+          <h4>UNDERWEIGHT</h4>
+          <h2>< 18.6</h2>
+          <p>Your body weight is below the recommended range. Focus on nutrient-rich foods and consider strength-building routines to improve overall health.</p>
+        </div>
+        <div class="card1 green-card">
+          <h4>NORMAL WEIGHT</h4>
+          <h2>18.6 - 24.9</h2>
+          <p>You’re in a healthy range. Maintain your lifestyle with balanced nutrition and regular physical activity to stay on track.</p>
+        </div>
+        <div class="card1 red-card">
+          <h4>OVERWEIGHT</h4>
+          <h2>25+</h2>
+          <p>Your weight is slightly above the ideal range. Small, consistent changes in diet and exercise can lead to meaningful improvements.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="copyright">
+        <h1>BMI BUDDY</h1>
+        <p>&copy All rights reserved 2026</p>
+      </div>
+      <div class="policy">
+        <p>Privacy Policy</p>
+        <p>Terms of Service</p>
+        <p>Contact</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
