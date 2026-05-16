@@ -123,6 +123,7 @@ h3 {
 }
 
 
+.age,
 .height,
 .weight {
   padding-top: 20px;
@@ -142,7 +143,7 @@ h3 {
   background-color: #fefefe;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
   position: relative;
-  height: 33rem;
+  height: 38rem;
   width: 33rem;
   border-radius: 10px;
 }

@@ -3,27 +3,37 @@ const form = document.querySelector(".contener");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
+  const age = parseInt(document.querySelector("#age").value);
   const height = parseInt(document.querySelector("#hig").value);
   const weigth = parseInt(document.querySelector("#wid").value);
   const data = document.querySelector(".data");
   const info = document.querySelector(".info");
 
-  if (height === "" || height < 0 || isNaN(height)) {
+  if (age === "" || age < 0 || isNaN(age)) {
+    data.innerHTML = `Please provide a valid age.`;
+  } else if (height === "" || height < 0 || isNaN(height)) {
     data.innerHTML = `Please give Your height ${height}`;
   } else if (weigth === "" || weigth < 0 || isNaN(weigth)) {
     data.innerHTML = `Please give Your weight ${weigth}`;
   } else {
     const bmi = (weigth / ((height * height) / 10000)).toFixed(2);
-    if (bmi < 18.6) {
-      data.innerHTML = `<span>Your BMI is: ${bmi}</span>`;
+    
+    // Age-adjusted interpretation
+    let lowerBound = 18.6;
+    let upperBound = 24.9;
+    
+    if (age >= 65) {
+      lowerBound = 22;
+      upperBound = 27;
+    }
+
+    data.innerHTML = `<span>Your BMI is: ${bmi}</span>`;
+
+    if (bmi < lowerBound) {
       info.innerHTML = `<span>Under Weight</span>`;
-    }
-    else if(bmi>18.6 || bmi<24.9){
-      data.innerHTML = `<span>Your BMI is: ${bmi}</span>`;
+    } else if (bmi >= lowerBound && bmi <= upperBound) {
       info.innerHTML = `<span>Normal</span>`;
-    }
-    else{
-      data.innerHTML = `<span>Your BMI is: ${bmi}</span>`;
+    } else {
       info.innerHTML = `<span>Over Weight</span>`;
     }
   }
